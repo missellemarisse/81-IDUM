@@ -14,14 +14,16 @@
   padding: 50px 20px;
 }
 body {
-  margin: 0;
   font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 .inter-title {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   font-optical-sizing: auto;
-  font-weight: 700;
+  font-weight: 400;
   font-style: normal;
+  font-variation-settings: 'wdth' 100;
 }
 
 .lang {
@@ -31,16 +33,15 @@ body {
 }
 .header-main {
   position: sticky;
-  top: 0;
+  top: 20px;
   z-index: 1000;
 }
 header {
-  background-color: var(--white);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  /* position: sticky; */
   top: 0;
   height: 13vh;
   z-index: 1000;
+  flex: 1;
 }
 .header-main {
   max-width: 1300px;
@@ -98,18 +99,33 @@ nav ul li a:hover {
   background-color: var(--light-blue);
 }
 .home {
-  background: url('ChatGPT Image 6 февр. 2026 г., 23_30_03.png') no-repeat
-    center center/cover;
-  color: var(--white);
+  position: relative;
   height: 100vh;
-  padding: 10px 15px;
+  overflow: hidden;
+  color: var(--white);
 }
 
+.bg-video {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: -1;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  padding: 10px 15px;
+}
 .home h2 {
   margin-bottom: 30px;
 }
 .card-home {
-  margin-top: 50px;
+  margin-top: 150px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -163,11 +179,24 @@ nav ul li a:hover {
   color: var(--white);
   transition: background-color 0.3s, color 0.3s;
 }
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.about h1 {
+  font-size: 46px;
+  font-weight: 700;
+}
+.about p {
+  max-width: 500px;
+}
 .footer {
   background: linear-gradient(135deg, var(--dark-blue), #061c33);
   color: var(--light-blue);
   font-family: Arial, sans-serif;
-  margin-top: 87vh;
+  position: relative;
+  z-index: 2;
 }
 
 .footer-container {
