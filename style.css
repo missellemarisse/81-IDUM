@@ -98,8 +98,16 @@ nav ul li a:hover {
   transition: background-color 0.3s;
 }
 .btn:hover {
-  background-color: var(--light-blue);
+  background-color: transparent;
+  color: var(--dark-blue);
+  border: 1px solid var(--dark-blue);
 }
+.login {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+/* Home */
 .home {
   position: relative;
   height: 100vh;
@@ -165,11 +173,12 @@ nav ul li a:hover {
   gap: 20px;
 }
 .home-btn i {
+  color: var(--white);
   font-size: 24px;
   width: 50px;
   height: 50px;
   padding-top: 13px;
-  background: rgba(255, 255, 255, 0.15); /* shaffof oq */
+  background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 
@@ -186,7 +195,7 @@ nav ul li a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 .about h1 {
   font-size: 46px;
@@ -196,6 +205,9 @@ nav ul li a:hover {
   max-width: 500px;
 }
 /* News */
+.news {
+  /* margin-top: 100px; */
+}
 .news h2 {
   margin-top: 20px;
   font-size: 36px;
@@ -204,6 +216,7 @@ nav ul li a:hover {
 }
 .news-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 50px;
   margin-top: 50px;
@@ -230,7 +243,8 @@ nav ul li a:hover {
   transition: background-color 0.3s;
 }
 .icon-links .btn:hover {
-  background-color: var(--light-blue);
+  background-color: transparent;
+  color: var(--dark-blue);
 }
 .icon-link {
   display: flex;
@@ -271,7 +285,7 @@ nav ul li a:hover {
   color: var(--white);
 }
 .teacher p {
-  margin-top: 40px;
+  margin-top: 60px;
   color: var(--white);
   max-width: 600px;
 }
@@ -284,7 +298,27 @@ nav ul li a:hover {
   border-radius: 35px;
   font-weight: bold;
   transition: background-color 0.3s;
-  margin-bottom: 150px;
+  margin-bottom: 50px;
+}
+.teacher .btn:hover {
+  background-color: transparent;
+  color: var(--dark-blue);
+  border: 1px solid var(--dark-blue);
+}
+.teacher .btn1 {
+  background-color: var(--dark-blue);
+  color: var(--white);
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 35px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  border: 2px solid var(--dark-blue);
+}
+.teacher .btn1:hover {
+  background-color: transparent;
+  color: var(--dark-blue);
+  border: 2px solid var(--dark-blue);
 }
 .teacher-img {
   max-width: 500px;
@@ -309,6 +343,39 @@ nav ul li a:hover {
   border-bottom-left-radius: none;
   border-bottom-right-radius: none;
   margin-top: 10px;
+}
+/* Aloqa */
+.contact-form {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 700px;
+}
+.contact-form {
+  margin: 100px auto;
+}
+.contact-form input,
+.contact-form textarea {
+  margin-left: 20px;
+  padding: 15px 25px;
+  border: 1px solid var(--dark-blue);
+  border-radius: 25px;
+  font-size: 16px;
+}
+.contact-form .btn {
+  background-color: var(--dark-blue);
+  color: var(--white);
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 35px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+.contact-form .btn:hover {
+  background-color: transparent;
+  color: var(--dark-blue);
+  border: 1px solid var(--dark-blue);
 }
 /* Footer */
 .footer {
@@ -384,4 +451,167 @@ nav ul li a:hover {
 
 .footer-cop {
   margin-left: 110px;
+}
+#mobile-menu {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--dark-blue);
+}
+@media (max-width: 992px) {
+  /* Header */
+  .header-main {
+    padding: 12px 15px;
+    border-radius: 30px;
+  }
+  #nav {
+    display: none;
+  }
+  nav ul {
+    gap: 20px;
+  }
+  #mobile-menu {
+    display: block;
+  }
+  .login .btn {
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+
+  /* Home */
+  .card-home {
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 100px;
+  }
+
+  .hero-title span {
+    font-size: 60px;
+  }
+
+  .hero-title strong {
+    font-size: 55px;
+    letter-spacing: 3px;
+  }
+
+  .home-content p {
+    font-size: 18px;
+  }
+
+  .home-btn {
+    flex-direction: row;
+  }
+
+  /* About */
+  .about {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .about p {
+    max-width: 100%;
+  }
+
+  /* Teachers */
+  .teacher {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .teacher-img {
+    max-width: 100%;
+  }
+
+  /* Footer */
+  .footer-col,
+  .footer-cop {
+    margin-left: 0;
+  }
+}
+@media (max-width: 768px) {
+  /* Navbar */
+  nav {
+    display: none;
+  }
+
+  #mobile-menu {
+    display: block;
+  }
+
+  .header-main {
+    justify-content: space-between;
+  }
+
+  /* Home */
+  .hero-title span {
+    font-size: 44px;
+  }
+
+  .hero-title strong {
+    font-size: 40px;
+  }
+
+  .home-content p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* News */
+  .news-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .news-card img {
+    width: 100%;
+  }
+
+  /* Teachers */
+  .teacher-img img {
+    height: auto;
+  }
+
+  /* Footer */
+  .footer-container {
+    text-align: center;
+  }
+}
+@media (max-width: 480px) {
+  /* Header */
+  .logo img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .login {
+    display: none;
+  }
+
+  /* Home */
+  .hero-title span {
+    font-size: 32px;
+  }
+
+  .hero-title strong {
+    font-size: 30px;
+    letter-spacing: 2px;
+  }
+
+  .home-btn i {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+
+  /* Buttons */
+  .btn {
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+
+  /* Teachers */
+  .teacher-img {
+    border-radius: 30px;
+  }
 }
