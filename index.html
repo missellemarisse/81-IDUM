@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,251 +11,320 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="inter-title">
-    <header>
-      <div class="home">
-        <video autoplay muted loop playsinline class="bg-video">
-          <source
-            src="./PixVerse_V5.6_Image_Text_540P_tiriltirib_ber.mp4"
-            type="video/mp4"
-          />
-        </video>
-        <div class="container header-main" id="navbar">
-          <div class="logo">
-            <img src="photo_2026-02-06_11-05-24-2.jpg" alt="" />
-          </div>
+  <body>
+    <header class="hero" id="home">
+      <video autoplay muted loop playsinline class="bg-video">
+        <source
+          src="./img/PixVerse_V5.6_Image_Text_540P_tiriltirib_ber.mp4"
+          type="video/mp4"
+        />
+      </video>
+      <div class="overlay"></div>
 
-          <nav>
+      <div class="container">
+        <div class="header-main" id="navbar">
+          <a class="logo" href="#home" aria-label="81-IDUM bosh sahifa">
+            <img
+              src="./img/photo_2026-02-06_11-05-24-2.jpg"
+              alt="81-IDUM logotipi"
+            />
+          </a>
+
+          <button
+            class="menu-toggle"
+            id="menu-toggle"
+            type="button"
+            aria-label="Menyuni ochish"
+            aria-expanded="false"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+
+          <nav id="site-nav">
             <ul>
-              <li><a href="#">Bosh sahifa</a></li>
-              <li><a href="#">Maktab haqida</a></li>
-              <li><a href="#">Yangiliklar</a></li>
-              <li><a href="#">Ustozlar</a></li>
-              <li><a href="#">O'quvchilar</a></li>
-              <li><a href="#">Aloqa</a></li>
+              <li><a class="nav-link active" href="#home">Bosh sahifa</a></li>
+              <li><a class="nav-link" href="#about">Maktab haqida</a></li>
+              <li><a class="nav-link" href="#news">Yangiliklar</a></li>
+              <li><a class="nav-link" href="#teachers">Ustozlar</a></li>
+              <li><a class="nav-link" href="#contact">Aloqa</a></li>
             </ul>
           </nav>
+
           <div class="login">
             <span class="lang">UZ</span>
-            <a href="#" class="btn">kirish →</a>
-            <a href="#" class="btn">Ro'yxatdan o'tish</a>
+            <a href="#contact" class="btn btn-outline">Kirish</a>
+            <a href="#contact" class="btn">Ro'yxatdan o'tish</a>
           </div>
         </div>
-        <!-- <div>
-          <button
-            class="btn btn-primary"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasRight"
-            aria-controls="offcanvasRight"
-          >
-            Toggle right offcanvas
-          </button>
-          <div
-            class="offcanvas offcanvas-end"
-            tabindex="-1"
-            id="offcanvasRight"
-            aria-labelledby="offcanvasRightLabel"
-          >
-            <div class="offcanvas-header">
-              <h5 id="offcanvasRightLabel">Offcanvas right</h5>
-              <button
-                type="button"
-                class="btn-close text-reset"
-                data-bs-dismiss="offcanvas"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="offcanvas-body">...</div>
-          </div>
-        </div> -->
-        <div class="card-home container">
+
+        <div class="card-home">
           <div class="home-content">
             <h1 class="hero-title">
-              <span>Hardoim </span>
+              <span>Har doim</span>
               <strong>YUQORI NATIJA</strong>
             </h1>
             <p>
-              81-ixtisoslashtirilgan umumta`lim maktabi 1970-yilda tashkil
-              etilgan bo'lib, Matematika faniga ixtisoslashtirilgan. Ta'lim
-              sifati va samaradorligini oshirishga, shuningdek, chet tillarini
-              o'rganishga alohida e'tibor qaratiladi.
+              81-ixtisoslashtirilgan umumta'lim maktabi 1970-yilda tashkil
+              etilgan. Maktabimiz matematika yo'nalishiga ixtisoslashgan bo'lib,
+              ta'lim sifati, chet tillari va zamonaviy ko'nikmalarni
+              rivojlantirishga alohida e'tibor qaratadi.
             </p>
           </div>
           <div class="home-btn">
-            <a href="https://www.instagram.com/81_idum/" target="_blank"
-              ><i class="fa-brands fa-instagram"></i
-            ></a>
+            <a
+              href="https://www.instagram.com/81_idum/"
+              target="_blank"
+              aria-label="Instagram"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
             <a
               href="https://www.facebook.com/groups/751099325082714"
               target="_blank"
-              ><i class="fa-brands fa-facebook"></i
-            ></a>
-            <a href="https://t.me/tashabbus81IDUM" target="_blank"
-              ><i class="fa-brands fa-telegram"></i
-            ></a>
-            <a href="https://www.youtube.com/@81-idum" target="_blank"
-              ><i class="fa-brands fa-youtube"></i
-            ></a>
+              aria-label="Facebook"
+            >
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a
+              href="https://t.me/tashabbus81IDUM"
+              target="_blank"
+              aria-label="Telegram"
+            >
+              <i class="fa-brands fa-telegram"></i>
+            </a>
+            <a
+              href="https://www.youtube.com/@81-idum"
+              target="_blank"
+              aria-label="YouTube"
+            >
+              <i class="fa-brands fa-youtube"></i>
+            </a>
           </div>
         </div>
       </div>
     </header>
+
     <main>
-      <section class="container">
+      <!-- <section class="container reveal" id="about">
         <div class="about">
-          <h1>
-            81-IDUM ga <br />
-            hush kelibsiz
-          </h1>
+          <h2>81-IDUM ga xush kelibsiz</h2>
           <div>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. A,
-              corporis commodi, fugit quidem sapiente explicabo, tempora nobis
-              ab culpa ad quas debitis!
+              Bizning maqsadimiz har bir o'quvchini bilimli, intizomli va
+              kelajak kasblariga tayyor holda tarbiyalash. Maktabda fan to'garaklari,
+              olimpiada tayyorlovlari va ijtimoiy loyihalar faol yo'lga qo'yilgan.
             </p>
-            <a href="#" class="btn">Ro'yxatdan o'tish</a>
+            <a href="#contact" class="btn">Bog'lanish</a>
           </div>
         </div>
-      </section>
-      <section class="container news">
-        <h2>Yangiliklar</h2>
+      </section> -->
+
+      <section class="container news reveal" id="news">
+        <div class="section-head">
+          <h2>Yangiliklar</h2>
+          <p>So'nggi voqealar va tadbirlar</p>
+        </div>
+
         <div class="news-container">
-          <div class="news-card">
-            <img src="./0131(1).jpg" alt="" />
-            <h3>Yangilik 1</h3>
+          <article class="news-card">
+            <img
+              src="./img/0131(1).jpg"
+              alt="Matematika olimpiadasi yangiligi"
+            />
+            <h3>Matematika olimpiadasi natijalari</h3>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia
-              enim maxime laudantium eius temporibus a debitis dolor quibusdam
-              explicabo fugiat.
+              Tuman bosqichida o'quvchilarimiz yuqori natija ko'rsatib, keyingi
+              bosqichga yo'llanmani qo'lga kiritdi.
             </p>
             <div class="icon-links">
               <div class="icon-link">
-                <span class="i"><i class="fa-regular fa-eye"></i></span>
-                <span class="i"><i class="fa-regular fa-comment"></i></span>
-                <span class="like"><i class="fa-regular fa-heart"></i></span>
+                <span class="meta"><i class="fa-regular fa-eye"></i> 1.2k</span>
+                <span class="meta"
+                  ><i class="fa-regular fa-comment"></i> 26</span
+                >
+                <button class="like-btn" type="button" aria-label="Yoqtirish">
+                  <i class="fa-regular fa-heart"></i>
+                  <span class="like-count">18</span>
+                </button>
               </div>
-              <button class="btn">Batafsil →</button>
+              <a href="#contact" class="btn btn-sm">Batafsil</a>
             </div>
-          </div>
-          <div class="news-card">
-            <img src="./0131(1).jpg" alt="" />
-            <h3>Yangilik 2</h3>
+          </article>
+
+          <article class="news-card">
+            <img src="./img/0131(1).jpg" alt="STEAM laboratoriya ochilishi" />
+            <h3>Yangi STEAM laboratoriya</h3>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia
-              enim maxime laudantium eius temporibus a debitis dolor quibusdam
-              explicabo fugiat.
+              Amaliy mashg'ulotlar uchun yangi laboratoriya ishga tushirildi.
+              O'quvchilar robototexnika bo'yicha darslarni boshlashdi.
             </p>
             <div class="icon-links">
               <div class="icon-link">
-                <span class="i"><i class="fa-regular fa-eye"></i></span>
-                <span class="i"><i class="fa-regular fa-comment"></i></span>
-                <span class="like"><i class="fa-regular fa-heart"></i></span>
+                <span class="meta"><i class="fa-regular fa-eye"></i> 980</span>
+                <span class="meta"
+                  ><i class="fa-regular fa-comment"></i> 14</span
+                >
+                <button class="like-btn" type="button" aria-label="Yoqtirish">
+                  <i class="fa-regular fa-heart"></i>
+                  <span class="like-count">11</span>
+                </button>
               </div>
-              <button class="btn">Batafsil →</button>
+              <a href="#contact" class="btn btn-sm">Batafsil</a>
             </div>
-          </div>
-          <div class="news-card">
-            <img src="./0131(1).jpg" alt="" />
-            <h3>Yangilik 3</h3>
+          </article>
+
+          <article class="news-card">
+            <img src="./img/0131(1).jpg" alt="Ochiq eshiklar kuni" />
+            <h3>Ochiq eshiklar kuni</h3>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia
-              enim maxime laudantium eius temporibus a debitis dolor quibusdam
-              explicabo fugiat.
+              Ota-onalar uchun maxsus uchrashuv tashkil etildi. Dars jarayoni,
+              to'garaklar va baholash tizimi haqida batafsil ma'lumot berildi.
             </p>
             <div class="icon-links">
               <div class="icon-link">
-                <span class="i"><i class="fa-regular fa-eye"></i></span>
-                <span class="i"><i class="fa-regular fa-comment"></i></span>
-                <span class="like"><i class="fa-regular fa-heart"></i></span>
+                <span class="meta"><i class="fa-regular fa-eye"></i> 1.6k</span>
+                <span class="meta"
+                  ><i class="fa-regular fa-comment"></i> 31</span
+                >
+                <button class="like-btn" type="button" aria-label="Yoqtirish">
+                  <i class="fa-regular fa-heart"></i>
+                  <span class="like-count">24</span>
+                </button>
               </div>
-              <button class="btn">Batafsil →</button>
+              <a href="#contact" class="btn btn-sm">Batafsil</a>
             </div>
-          </div>
+          </article>
         </div>
       </section>
-      <section class="teachers">
+
+      <section class="teachers reveal" id="teachers">
         <div class="container teacher">
-          <div>
-            <h2>Ustozlar</h2>
+          <div class="teacher-content">
+            <h2>Ustozlar jamoasi</h2>
             <p>
-              Bizning maktabda 10 yillik va undan ham ko`proq tajribaga ega
-              ustozlar dars beradi. Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Eum, repudiandae. Ipsam quibusdam recusandae
-              pariatur cupiditate consequuntur voluptate, dolorem, quae minima
-              aliquam similique rem itaque quidem.
+              Maktabimizda tajribali va malakali ustozlar faoliyat yuritadi.
+              Ular fan bo'yicha chuqur bilim berish bilan birga, o'quvchilarni
+              mustaqil fikrlash, jamoada ishlash va ijodkorlikka yo'naltiradi.
             </p>
-            <button class="btn">Batafsil →</button>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatum voluptatibus sit ab voluptate. Repellat, vero?
-              Voluptatum ullam aut doloremque eius ipsam quod. Fugit, optio id!
-              Ut cupiditate debitis alias veritatis!
-            </p>
+            <a href="#contact" class="btn">Batafsil</a>
           </div>
-          <div>
-            <div class="teacher-img">
-              <img src="./how-to-be-teacher-malaysia-feature.png" alt="" />
-              <h3>Lorem, ipsum dolor.</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-                odio facere iste modi. Officiis assumenda ad recusandae
-                consequatur excepturi rerum!
-              </p>
-              <button class="btn1">Batafsil →</button>
-            </div>
+
+          <article class="teacher-img">
+            <img
+              src="./img/how-to-be-teacher-malaysia-feature.png"
+              alt="Ustozlar jamoasi"
+            />
+            <h3>Kasbiy yondashuv va zamonaviy metodika</h3>
+            <p>
+              Har bir darsda interaktiv usullar qo'llanadi. Bu yondashuv
+              o'quvchilarni fanlarga qiziqtiradi va mustahkam natijaga olib
+              keladi.
+            </p>
+            <a href="./sow.html" class="btn1">Batafsil</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="container reveal" id="contact">
+        <div class="section-head">
+          <h2>Aloqa</h2>
+          <p>Savolingiz bo'lsa, bizga yozib qoldiring</p>
+        </div>
+        <div class="contact">
+          <form class="contact-form" id="contact-form">
+            <input type="text" id="name" placeholder="Ismingiz" required />
+            <input
+              type="email"
+              id="email"
+              placeholder="Email manzilingiz"
+              required
+            />
+            <input
+              type="phone"
+              id="phone"
+              placeholder="Telefon raqamingiz"
+              required
+            />
+            <textarea
+              name="message"
+              id="shikoyat"
+              placeholder="Shikoyatingiz (Ixtiyoriy)"
+            ></textarea>
+            <textarea
+              id="message"
+              rows="5"
+              placeholder="Xabaringiz..."
+              required
+            ></textarea>
+            <button class="btn" type="submit">Yuborish</button>
+            <p id="form-message" class="form-message" aria-live="polite"></p>
+          </form>
+          <div class="contact-img">
+            <img src="./img/image.png" alt="Aloqa" />
           </div>
         </div>
       </section>
     </main>
+
+    <button
+      id="scroll-top"
+      class="scroll-top"
+      type="button"
+      aria-label="Yuqoriga"
+    >
+      <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
     <footer class="footer">
       <div class="footer-container container">
         <div class="footer-com">
-          <img src="photo_2026-02-06_11-05-24-2.jpg" alt="" class="img2" />
+          <img
+            src="./img/photo_2026-02-06_11-05-24-2.jpg"
+            alt="Maktab logotipi"
+            class="img2"
+          />
           <h3>81-maktab</h3>
           <p>
-            81-sonli maktab zamonaviy ta'lim muassasasiga qaratilgan sifatli
-            ta'lim, kuchli qadriyatlar va talabalar muvaffaqiyati.
+            81-sonli maktab zamonaviy va sifatli ta'lim, kuchli qadriyatlar
+            hamda o'quvchi muvaffaqiyati uchun xizmat qiladi.
           </p>
         </div>
 
         <div class="footer-col">
-          <h4>Tezkor Linklar</h4>
+          <h4>Tezkor havolalar</h4>
           <ul>
-            <li><a href="#">Maktab</a></li>
-            <li><a href="#">Maktab haqida</a></li>
-            <li><a href="#">Yangiliklar</a></li>
-            <li><a href="#">Ustozlar</a></li>
-            <li><a href="#">Aloqa</a></li>
+            <li><a href="#home">Bosh sahifa</a></li>
+            <li><a href="#about">Maktab haqida</a></li>
+            <li><a href="#news">Yangiliklar</a></li>
+            <li><a href="#teachers">Ustozlar</a></li>
+            <li><a href="#contact">Aloqa</a></li>
           </ul>
         </div>
 
         <div class="footer-cop">
           <h4>Aloqa</h4>
-          <p>📍 Toshkent, Maktab No. 81</p>
-          <p>📞 +998 71 123 45 67</p>
-          <p>💬 info@school81.uz</p>
+          <p>
+            <i class="fa-solid fa-location-dot"></i> Toshkent, Maktab No. 81
+          </p>
+          <p><i class="fa-solid fa-phone"></i> +998 71 123 45 67</p>
+          <p><i class="fa-solid fa-envelope"></i> info@school81.uz</p>
         </div>
       </div>
 
       <div class="footer-bottom">
-        © 2026 81-sonli maktab. Barcha huquqlar himoyalangan.
+        &copy; <span id="year"></span> 81-sonli maktab. Barcha huquqlar
+        himoyalangan.
       </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
