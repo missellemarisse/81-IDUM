@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>81-IDUM | Tizimga kirish</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./signin/signin.css" />
+</head>
+<body>
+  <header class="page-header">
+    <div class="container">
+      <div class="header-main" id="navbar">
+        <a class="logo" href="index.html#home" aria-label="81-IDUM bosh sahifa">
+          <img src="./img/photo_2026-02-06_11-05-24-2.jpg" alt="81-IDUM logotipi" />
+        </a>
+
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Menyuni ochish" aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav id="site-nav">
+          <ul>
+            <li><a class="nav-link" href="index.html#home">Bosh sahifa</a></li>
+            <li><a class="nav-link" href="index.html#about">Maktab haqida</a></li>
+            <li><a class="nav-link" href="index.html#news">Yangiliklar</a></li>
+            <li><a class="nav-link" href="index.html#teachers">Ustozlar</a></li>
+            <li><a class="nav-link" href="contact.html">Aloqa</a></li>
+          </ul>
+        </nav>
+
+        <div class="login">
+          <span class="lang">UZ</span>
+          <a href="signin.html" class="btn btn-outline">Kirish</a>
+          <a href="register.html" class="btn">Ro'yxatdan o'tish</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="signin-hero">
+    <div class="container">
+      <h1>Tizimga kirish</h1>
+      <p>Hisobingizga kiring yoki yangi hisob yarating</p>
+    </div>
+  </section>
+
+  <main class="signin-section">
+    <div class="container">
+      <div class="signin-card">
+        <div class="signin-card-icon">
+          <i class="fa-solid fa-user-graduate"></i>
+        </div>
+        <h2>Kirish</h2>
+        <p class="signin-subtitle">Email va parolingizni kiriting</p>
+
+        <form class="signin-form" id="signin-form">
+          <label for="signin-email">Email</label>
+          <input type="email" id="signin-email" name="email" placeholder="masalan: ism@email.uz" required autocomplete="email" />
+          <label for="signin-password">Parol</label>
+          <input type="password" id="signin-password" name="password" placeholder="Parolingiz" required autocomplete="current-password" />
+          <a href="contact.html" class="forgot">Parolni unutdingizmi?</a>
+          <button class="btn" type="submit">Kirish</button>
+          <p id="signin-message" class="form-message" aria-live="polite"></p>
+        </form>
+
+        <div class="signin-divider">
+          <span>yoki</span>
+        </div>
+
+        <p class="signin-register">
+          Hisobingiz yo‘qmi? <a href="register.html">Ro'yxatdan o'tish</a>
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container container">
+      <div class="footer-com">
+        <img src="./img/photo_2026-02-06_11-05-24-2.jpg" alt="Maktab logotipi" class="img2" />
+        <h3>81-maktab</h3>
+        <p>
+          81-sonli maktab zamonaviy va sifatli ta'lim, kuchli qadriyatlar
+          hamda o'quvchi muvaffaqiyati uchun xizmat qiladi.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Tezkor havolalar</h4>
+        <ul>
+          <li><a href="index.html#home">Bosh sahifa</a></li>
+          <li><a href="index.html#about">Maktab haqida</a></li>
+          <li><a href="index.html#news">Yangiliklar</a></li>
+          <li><a href="index.html#teachers">Ustozlar</a></li>
+          <li><a href="contact.html">Aloqa</a></li>
+        </ul>
+      </div>
+      <div class="footer-cop">
+        <h4>Aloqa</h4>
+        <p>
+          <i class="fa-solid fa-location-dot"></i>
+          <a href="https://yandex.uz/maps/org/51913117189/?ll=69.190318%2C41.306955&z=16">Toshkent, Maktab No. 81</a>
+        </p>
+        <p><i class="fa-solid fa-phone"></i> <a href="tel:+998711234567">+998 71 123 45 67</a></p>
+        <p><i class="fa-solid fa-envelope"></i> info@school81.uz</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; <span id="year"></span> 81-sonli maktab. Barcha huquqlar himoyalangan.
+    </div>
+  </footer>
+
+  <script src="./signin/signin.js"></script>
+</body>
+</html>

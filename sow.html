@@ -17,7 +17,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./sow/sow.css" />
+    <link rel="stylesheet" href="./show/show.css" />
   </head>
   <body>
     <header class="page-header">
@@ -59,15 +59,18 @@
                 <a class="nav-link active" href="#teachers-detail">Ustozlar</a>
               </li>
               <li>
-                <a class="nav-link" href="../index.html#contact">Aloqa</a>
+                <a class="nav-link" href="#comments">Izohlar</a>
+              </li>
+              <li>
+                <a class="nav-link" href="../contact.html">Aloqa</a>
               </li>
             </ul>
           </nav>
 
           <div class="login">
             <span class="lang">UZ</span>
-            <a href="../index.html#contact" class="btn btn-outline">Kirish</a>
-            <a href="../index.html#contact" class="btn">Ro'yxatdan o'tish</a>
+            <a href="../signin.html" class="btn btn-outline">Kirish</a>
+            <a href="../register.html" class="btn">Ro'yxatdan o'tish</a>
           </div>
         </div>
       </div>
@@ -101,6 +104,98 @@
           </article>
         </div>
       </section>
+
+      <!-- Fikr-mulohazalar (commentariya) — show sahifasida -->
+      <section class="comments-section container" id="comments">
+        <div class="section-head">
+          <h2>Fikr-mulohazalar</h2>
+          <p>O'quvchilar va ota-onalar biz haqimizda nima deyishadi</p>
+        </div>
+
+        <div class="comments-stats">
+          <div class="stat-card">
+            <span class="stat-icon"><i class="fa-solid fa-comments"></i></span>
+            <span class="stat-num">248</span>
+            <span class="stat-label">Izohlar</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-icon"><i class="fa-solid fa-star"></i></span>
+            <span class="stat-num">4.9</span>
+            <span class="stat-label">Reyting</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-icon"><i class="fa-solid fa-heart"></i></span>
+            <span class="stat-num">1.2k</span>
+            <span class="stat-label">Yoqtirishlar</span>
+          </div>
+        </div>
+
+        <div class="comments-wrapper">
+          <div class="comments-list">
+            <article class="comment-card">
+              <div class="comment-avatar">
+                <i class="fa-solid fa-user"></i>
+              </div>
+              <div class="comment-body">
+                <div class="comment-meta">
+                  <strong>Dilnoza R.</strong>
+                  <span class="comment-date"><i class="fa-regular fa-clock"></i> 2 kun oldin</span>
+                </div>
+                <p>Maktabda matematika va ingliz tili darajasi juda yaxshi. O'g'lim 5-sinfda va olimpiadalarda qatnashmoqda. Rahmat ustozlarga!</p>
+                <div class="comment-actions">
+                  <button type="button" class="comment-like" aria-label="Yoqtirish"><i class="fa-regular fa-heart"></i> 12</button>
+                  <button type="button" class="comment-reply" aria-label="Javob"><i class="fa-regular fa-comment"></i> Javob</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="comment-card">
+              <div class="comment-avatar accent">
+                <i class="fa-solid fa-user"></i>
+              </div>
+              <div class="comment-body">
+                <div class="comment-meta">
+                  <strong>Jasur B.</strong>
+                  <span class="comment-date"><i class="fa-regular fa-clock"></i> 5 kun oldin</span>
+                </div>
+                <p>81-IDUM — tumanimizdagi eng yaxshi maktablardan biri. STEAM to'garaklari va zamonaviy jihozlardan foydalanishni yoqtim.</p>
+                <div class="comment-actions">
+                  <button type="button" class="comment-like" aria-label="Yoqtirish"><i class="fa-regular fa-heart"></i> 28</button>
+                  <button type="button" class="comment-reply" aria-label="Javob"><i class="fa-regular fa-comment"></i> Javob</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="comment-card">
+              <div class="comment-avatar">
+                <i class="fa-solid fa-user"></i>
+              </div>
+              <div class="comment-body">
+                <div class="comment-meta">
+                  <strong>Malika K.</strong>
+                  <span class="comment-date"><i class="fa-regular fa-clock"></i> 1 hafta oldin</span>
+                </div>
+                <p>Ochiq eshiklar kunida qatnashdim — darsxona va laboratoriyalar juda toza, ustozlar samimiy. Qizim bu yil 1-sinfga kirdi.</p>
+                <div class="comment-actions">
+                  <button type="button" class="comment-like" aria-label="Yoqtirish"><i class="fa-regular fa-heart"></i> 15</button>
+                  <button type="button" class="comment-reply" aria-label="Javob"><i class="fa-regular fa-comment"></i> Javob</button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="comment-form-box">
+            <h3><i class="fa-solid fa-pen-to-square"></i> Izoh qoldiring</h3>
+            <form class="comment-form" id="comment-form">
+              <input type="text" placeholder="Ismingiz" required />
+              <input type="email" placeholder="Email" required />
+              <textarea rows="4" placeholder="Fikringizni yozing..." required></textarea>
+              <button type="submit" class="btn"><i class="fa-solid fa-paper-plane"></i> Yuborish</button>
+            </form>
+            <p class="comment-hint"><i class="fa-solid fa-info-circle"></i> Izohingiz moderator tomonidan ko'rib chiqiladi.</p>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="footer">
       <div class="footer-container container">
@@ -120,11 +215,12 @@
         <div class="footer-col">
           <h4>Tezkor havolalar</h4>
           <ul>
-            <li><a href="#home">Bosh sahifa</a></li>
-            <li><a href="#about">Maktab haqida</a></li>
-            <li><a href="#news">Yangiliklar</a></li>
-            <li><a href="#teachers">Ustozlar</a></li>
-            <li><a href="#contact">Aloqa</a></li>
+            <li><a href="../index.html#home">Bosh sahifa</a></li>
+            <li><a href="../index.html#about">Maktab haqida</a></li>
+            <li><a href="../index.html#news">Yangiliklar</a></li>
+            <li><a href="../index.html#teachers">Ustozlar</a></li>
+            <li><a href="#comments">Izohlar</a></li>
+            <li><a href="../contact.html">Aloqa</a></li>
           </ul>
         </div>
 
@@ -133,7 +229,7 @@
           <p>
             <i class="fa-solid fa-location-dot"></i> Toshkent, Maktab No. 81
           </p>
-          <p><i class="fa-solid fa-phone"></i> +998 71 123 45 67</p>
+          <p><i class="fa-solid fa-phone"></i> <a href="tel:+998711234567">+998 71 123 45 67</a></p>
           <p><i class="fa-solid fa-envelope"></i> info@school81.uz</p>
         </div>
       </div>
@@ -144,6 +240,6 @@
       </div>
     </footer>
 
-    <script src="./sow/sow.js"></script>
+    <script src="./show/sow.js"></script>
   </body>
 </html>
