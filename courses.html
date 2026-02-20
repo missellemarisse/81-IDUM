@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kurslar – 81-IDUM</title>
+    <meta name="description" content="81-IDUM maktabida taqdim etiladigan kurslar va yo'nalishlar ro'yxati." />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="courses/courses.css" />
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="courses-hero" id="home">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="header-main" id="navbar">
+                <a class="logo" href="index.html" aria-label="81-IDUM bosh sahifa">
+                    <img src="./img/photo_2026-02-06_11-05-24-2.jpg" alt="81-IDUM logotipi" />
+                </a>
+
+                <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Menyuni ochish"
+                    aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <nav id="site-nav">
+                    <ul>
+                        <li><a class="nav-link" href="index.html#home">Bosh sahifa</a></li>
+                        <li><a class="nav-link" href="index.html#about">Maktab haqida</a></li>
+                        <li><a class="nav-link active" href="courses.html">Kurslar</a></li>
+                        <li><a class="nav-link" href="index.html#news">Yangiliklar</a></li>
+                        <li><a class="nav-link" href="index.html#teachers">Ustozlar</a></li>
+                        <li><a class="nav-link" href="contact.html">Aloqa</a></li>
+                    </ul>
+                </nav>
+
+                <div class="login">
+                    <span class="lang">UZ</span>
+                    <a href="signin.html" class="btn btn-outline">Kirish</a>
+                    <a href="register.html" class="btn">Ro'yxatdan o'tish</a>
+                </div>
+            </div>
+
+            <!-- Hero Content -->
+            <div class="courses-hero-content">
+                <span class="badge">81-IDUM Kurslar</span>
+                <h1>Bilim va kelajak <strong>shu yerda boshlanadi</strong></h1>
+                <p>Zamonaviy o'qitish metodikasi asosida tayyorlangan kurslarimiz orqali o'z salohiyatingizni oching.
+                </p>
+                <a href="#courses-list" class="btn">Kurslarga o'tish <i class="fa-solid fa-arrow-down"
+                        style="margin-left:6px"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- FILTER BAR -->
+        <section class="container courses-filter-section" id="courses-list">
+            <div class="section-head">
+                <h2>Barcha kurslar</h2>
+                <p>O'zingizga mos yo'nalishni tanlang</p>
+            </div>
+
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all" type="button">Barchasi</button>
+                <button class="filter-btn" data-filter="math" type="button">Matematika</button>
+                <button class="filter-btn" data-filter="language" type="button">Tillar</button>
+                <button class="filter-btn" data-filter="science" type="button">Fanlar</button>
+                <button class="filter-btn" data-filter="tech" type="button">Texnologiya</button>
+            </div>
+
+            <!-- COURSE CARDS -->
+            <div class="courses-grid" id="courses-grid">
+
+                <article class="course-card reveal" data-category="math">
+                    <div class="course-img-wrap">
+                        <div class="course-icon"><i class="fa-solid fa-square-root-variable"></i></div>
+                        <span class="course-tag">Matematika</span>
+                    </div>
+                    <div class="course-body">
+                        <h3>Chuqur matematika</h3>
+                        <p>Olimpiada va imtihonlarga tayyorlanadigan kengaytirilgan matematik kurs.</p>
+                        <ul class="course-meta">
+                            <li><i class="fa-regular fa-clock"></i> 6 oy</li>
+                            <li><i class="fa-solid fa-users"></i> 7–11-sinf</li>
+                            <li><i class="fa-solid fa-star"></i> 4.9</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-sm">Ro'yxatdan o'tish</a>
+                    </div>
+                </article>
+
+                <article class="course-card reveal" data-category="language">
+                    <div class="course-img-wrap course-img-lang">
+                        <div class="course-icon"><i class="fa-solid fa-language"></i></div>
+                        <span class="course-tag">Tillar</span>
+                    </div>
+                    <div class="course-body">
+                        <h3>Ingliz tili (IELTS)</h3>
+                        <p>IELTS imtihoniga maqsadli tayyorgarlik va chet el universitetlariga kirish.</p>
+                        <ul class="course-meta">
+                            <li><i class="fa-regular fa-clock"></i> 4 oy</li>
+                            <li><i class="fa-solid fa-users"></i> 8–11-sinf</li>
+                            <li><i class="fa-solid fa-star"></i> 4.8</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-sm">Ro'yxatdan o'tish</a>
+                    </div>
+                </article>
+
+                <article class="course-card reveal" data-category="science">
+                    <div class="course-img-wrap course-img-science">
+                        <div class="course-icon"><i class="fa-solid fa-flask"></i></div>
+                        <span class="course-tag">Tabiiy fanlar</span>
+                    </div>
+                    <div class="course-body">
+                        <h3>Kimyo va biologiya</h3>
+                        <p>Tibbiyot va tabiiy fanlar yo'nalishiga ixtisoslashtirilgan amaliy kurs.</p>
+                        <ul class="course-meta">
+                            <li><i class="fa-regular fa-clock"></i> 5 oy</li>
+                            <li><i class="fa-solid fa-users"></i> 8–11-sinf</li>
+                            <li><i class="fa-solid fa-star"></i> 4.7</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-sm">Ro'yxatdan o'tish</a>
+                    </div>
+                </article>
+
+                <article class="course-card reveal" data-category="tech">
+                    <div class="course-img-wrap course-img-tech">
+                        <div class="course-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                        <span class="course-tag">Texnologiya</span>
+                    </div>
+                    <div class="course-body">
+                        <h3>Dasturlash asoslari</h3>
+                        <p>Python va algoritmlar orqali zamonaviy dasturlash ko'nikmalarini egallash.</p>
+                        <ul class="course-meta">
+                            <li><i class="fa-regular fa-clock"></i> 3 oy</li>
+                            <li><i class="fa-solid fa-users"></i> 6–11-sinf</li>
+                            <li><i class="fa-solid fa-star"></i> 4.9</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-sm">Ro'yxatdan o'tish</a>
+                    </div>
+                </article>
+
+                <article class="course-card reveal" data-category="language">
+                    <div class="course-img-wrap course-img-lang">
+                        <div class="course-icon"><i class="fa-solid fa-globe"></i></div>
+                        <span class="course-tag">Tillar</span>
+                    </div>
+                    <div class="course-body">
+                        <h3>Rus tili</h3>
+                        <p>Muloqot, grammatika va rus adabiyotiga oid chuqurlashtirilgan kurs.</p>
+                        <ul class="course-meta">
+                            <li><i class="fa-regular fa-clock"></i> 4 oy</li>
+                            <li><i class="fa-solid fa-users"></i> 5–11-sinf</li>
+                            <li><i class="fa-solid fa-star"></i> 4.6</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-sm">Ro'yxatdan o'tish</a>
+                    </div>
+                </article>
+
+                <article class="course-card reveal" data-category="math">
+                    <div class="course-img-wrap">
+                        <div class="course-icon"><i class="fa-solid fa-chart-line"></i></div>
+                        <span class="course-tag">Matematika</span>
+                    </div>
+                    <div class="course-body">
+                        <h3>Fizika va mexanika</h3>
+                        <p>Nazariy va amaliy fizikani birlashtirgan olimpiada darajasidagi kurs.</p>
+                        <ul class="course-meta">
+                            <li><i class="fa-regular fa-clock"></i> 6 oy</li>
+                            <li><i class="fa-solid fa-users"></i> 9–11-sinf</li>
+                            <li><i class="fa-solid fa-star"></i> 4.8</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-sm">Ro'yxatdan o'tish</a>
+                    </div>
+                </article>
+
+                <article class="course-card reveal" data-category="tech">
+                    <div class="course-img-wrap course-img-tech">
+                        <div class="course-icon"><i class="fa-solid fa-robot"></i></div>
+                        <span class="course-tag">Texnologiya</span>
+                    </div>
+                    <div class="course-body">
+                        <h3>Robototexnika</h3>
+                        <p>Arduino va Lego Mindstorms asosida qurilmalar loyihalash va dasturlash.</p>
+                        <ul class="course-meta">
+                            <li><i class="fa-regular fa-clock"></i> 4 oy</li>
+                            <li><i class="fa-solid fa-users"></i> 5–9-sinf</li>
+                            <li><i class="fa-solid fa-star"></i> 4.9</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-sm">Ro'yxatdan o'tish</a>
+                    </div>
+                </article>
+
+                <article class="course-card reveal" data-category="science">
+                    <div class="course-img-wrap course-img-science">
+                        <div class="course-icon"><i class="fa-solid fa-atom"></i></div>
+                        <span class="course-tag">Tabiiy fanlar</span>
+                    </div>
+                    <div class="course-body">
+                        <h3>Geografiya va ekologiya</h3>
+                        <p>Dunyo geografiyasi, ekotizimlar va atrof-muhit ilmi bo'yicha kuch kurs.</p>
+                        <ul class="course-meta">
+                            <li><i class="fa-regular fa-clock"></i> 3 oy</li>
+                            <li><i class="fa-solid fa-users"></i> 6–10-sinf</li>
+                            <li><i class="fa-solid fa-star"></i> 4.5</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-sm">Ro'yxatdan o'tish</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- STATS SECTION -->
+        <section class="courses-stats-section">
+            <div class="container courses-stats">
+                <div class="stat-item reveal">
+                    <span class="stat-num" data-target="1200">0</span>
+                    <p>O'quvchi</p>
+                </div>
+                <div class="stat-item reveal">
+                    <span class="stat-num" data-target="18">0</span>
+                    <p>Kurs yo'nalishi</p>
+                </div>
+                <div class="stat-item reveal">
+                    <span class="stat-num" data-target="40">0</span>
+                    <p>Tajribali ustoz</p>
+                </div>
+                <div class="stat-item reveal">
+                    <span class="stat-num" data-target="96">0</span>
+                    <p>% Muvaffaqiyat</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA SECTION -->
+        <section class="container courses-cta-section reveal">
+            <div class="courses-cta glass-section">
+                <div class="cta-content">
+                    <h2>Kursga yozilishni xohlaysizmi?</h2>
+                    <p>Qo'shimcha ma'lumot olish yoki ro'yxatdan o'tish uchun biz bilan bog'laning.</p>
+                </div>
+                <a href="contact.html" class="btn">Bog'lanish <i class="fa-solid fa-arrow-right"
+                        style="margin-left:6px"></i></a>
+            </div>
+        </section>
+
+    </main>
+
+    <button id="scroll-top" class="scroll-top" type="button" aria-label="Yuqoriga">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <footer class="footer">
+        <div class="footer-container container">
+            <div class="footer-com">
+                <img src="./img/photo_2026-02-06_11-05-24-2.jpg" alt="Maktab logotipi" class="img2" />
+                <h3>81-maktab</h3>
+                <p>81-sonli maktab zamonaviy va sifatli ta'lim, kuchli qadriyatlar hamda o'quvchi muvaffaqiyati uchun
+                    xizmat qiladi.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Tezkor havolalar</h4>
+                <ul>
+                    <li><a href="index.html#home">Bosh sahifa</a></li>
+                    <li><a href="index.html#about">Maktab haqida</a></li>
+                    <li><a href="courses.html">Kurslar</a></li>
+                    <li><a href="index.html#news">Yangiliklar</a></li>
+                    <li><a href="contact.html">Aloqa</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-cop">
+                <h4>Aloqa</h4>
+                <a href="https://yandex.uz/maps/org/51913117189/?ll=69.190318%2C41.306955&z=16">
+                    <i class="fa-solid fa-location-dot"></i> Toshkent, Maktab No. 81
+                </a>
+                <p><i class="fa-solid fa-phone"></i> <a href="tel:+998711234567">+998 71 123 45 67</a></p>
+                <p><i class="fa-solid fa-envelope"></i> info@school81.uz</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; <span id="year"></span> 81-sonli maktab. Barcha huquqlar himoyalangan.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="courses/courses.js"></script>
+</body>
+
+</html>

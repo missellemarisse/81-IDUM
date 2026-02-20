@@ -114,7 +114,11 @@ a {
   gap: 10px;
 }
 
-.lang { font-weight: 700; font-size: 14px; color: #dbe9ff; }
+.lang {
+  font-weight: 700;
+  font-size: 14px;
+  color: #dbe9ff;
+}
 
 .btn {
   display: inline-flex;
@@ -290,6 +294,35 @@ a {
 
 .register-signin a:hover {
   text-decoration: underline;
+}
+
+/* ——— Password toggle ——— */
+.pw-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.pw-wrap input {
+  padding-right: 46px !important;
+}
+
+.pw-toggle {
+  position: absolute;
+  right: 14px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--muted);
+  font-size: 16px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s ease;
+}
+
+.pw-toggle:hover {
+  color: var(--primary-2);
 }
 
 /* Footer */

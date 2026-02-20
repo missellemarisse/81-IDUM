@@ -63,3 +63,18 @@ if (registerForm) {
     registerForm.reset();
   });
 }
+
+// Password show/hide toggle
+document.querySelectorAll('.pw-toggle').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const targetId = btn.getAttribute('data-target');
+    const input = document.getElementById(targetId);
+    const icon = btn.querySelector('i');
+    if (!input) return;
+    const isHidden = input.type === 'password';
+    input.type = isHidden ? 'text' : 'password';
+    icon.classList.toggle('fa-eye', !isHidden);
+    icon.classList.toggle('fa-eye-slash', isHidden);
+    btn.setAttribute('aria-label', isHidden ? "Parolni yashirish" : "Parolni ko'rsatish");
+  });
+});
