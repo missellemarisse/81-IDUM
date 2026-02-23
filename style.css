@@ -23,7 +23,12 @@ html {
 body {
   font-family: 'Inter', sans-serif;
   color: var(--text);
-  background: radial-gradient(circle at 20% -10%, #d9e9ff 0%, var(--bg) 42%, #eef4ff 100%);
+  background: radial-gradient(
+    circle at 20% -10%,
+    #d9e9ff 0%,
+    var(--bg) 42%,
+    #eef4ff 100%
+  );
   line-height: 1.6;
 }
 
@@ -57,7 +62,11 @@ a {
 .overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(145deg, rgba(4, 23, 47, 0.82), rgba(6, 39, 74, 0.58));
+  background: linear-gradient(
+    145deg,
+    rgba(4, 23, 47, 0.82),
+    rgba(6, 39, 74, 0.58)
+  );
   z-index: -1;
 }
 
@@ -248,15 +257,18 @@ section {
 }
 
 .glass-section {
+  margin-top: 100px;
   position: relative;
   border-radius: 26px;
   padding: 54px 34px;
   border: 1px solid #dbe8f9;
-  background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(238, 245, 255, 0.84)),
+  background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.92),
+      rgba(238, 245, 255, 0.84)
+    ),
     radial-gradient(circle at 10% 8%, rgba(20, 184, 166, 0.12), transparent 45%);
-  box-shadow:
-    0 22px 46px rgba(13, 63, 120, 0.09),
+  box-shadow: 0 22px 46px rgba(13, 63, 120, 0.09),
     inset 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 
@@ -504,7 +516,6 @@ section {
 }
 
 .footer {
-  margin-top: 70px;
   background: #071b32;
   color: #d2e1f5;
 }
@@ -584,8 +595,7 @@ section {
 .reveal {
   opacity: 0;
   transform: translateY(28px);
-  transition:
-    opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+  transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
     transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
