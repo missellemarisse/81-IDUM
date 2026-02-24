@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>81-IDUM | Yangiliklar</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./news/new.css" />
+  </head>
+
+  <body class="news-page">
+    <header class="news-hero" id="home">
+      <div class="container">
+        <div class="header-main" id="navbar">
+          <a class="logo" href="./index.html" aria-label="81-IDUM bosh sahifa">
+            <img
+              src="./img/photo_2026-02-06_11-05-24-2.jpg"
+              alt="81-IDUM logotipi"
+            />
+          </a>
+
+          <button
+            class="menu-toggle"
+            id="menu-toggle"
+            type="button"
+            aria-label="Menyuni ochish"
+            aria-expanded="false"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+
+          <nav id="site-nav">
+            <ul>
+              <li><a class="nav-link" href="./index.html">Bosh sahifa</a></li>
+              <li><a class="nav-link" href="./about.html">Maktab haqida</a></li>
+              <li><a class="nav-link" href="./courses.html">Kurslar</a></li>
+              <li><a class="nav-link active" href="#news">Yangiliklar</a></li>
+              <li><a class="nav-link" href="./teachers.html">Ustozlar</a></li>
+              <li><a class="nav-link" href="./contact.html">Aloqa</a></li>
+            </ul>
+          </nav>
+
+          <div class="login">
+            <span class="lang">UZ</span>
+            <a href="./signin.html" class="btn btn-outline">Kirish</a>
+            <a href="./register.html" class="btn">Ro'yxatdan o'tish</a>
+          </div>
+        </div>
+
+        <div class="news-hero-content reveal">
+          <h1>81-IDUM Yangiliklari</h1>
+          <p>Maktab hayotidagi eng dolzarb voqealar, tanlovlar va tadbirlar.</p>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="container news reveal glass-section" id="news">
+        <div class="section-head">
+          <h2>Top 3 yangilik</h2>
+          <p>Eng ko'p o'qilgan yangiliklar</p>
+        </div>
+
+        <div class="news-container">
+          <article class="news-card">
+            <img
+              src="./img/0131(1).jpg"
+              alt="Matematika olimpiadasi yangiligi"
+            />
+            <h3>Matematika olimpiadasida g'oliblik</h3>
+            <p>
+              9-sinf o'quvchilarimiz viloyat bosqichida faxrli o'rinlarni
+              egallab, respublika bosqichiga yo'llanma oldi.
+            </p>
+            <div class="icon-links">
+              <div class="icon-link">
+                <span class="meta"><i class="fa-regular fa-eye"></i> 1.9k</span>
+                <span class="meta"
+                  ><i class="fa-regular fa-comment"></i>
+                  <span class="comment-count">0</span></span
+                >
+                <button class="like-btn" type="button" aria-label="Yoqtirish">
+                  <i class="fa-regular fa-heart"></i>
+                  <span class="like-count">32</span>
+                </button>
+              </div>
+            </div>
+            <div class="comment-box">
+              <form class="comment-form">
+                <input
+                  type="text"
+                  class="comment-input"
+                  placeholder="Fikringizni yozing"
+                  maxlength="120"
+                  required
+                />
+                <button class="btn btn-sm" type="submit">Yuborish</button>
+              </form>
+              <p class="comment-empty">Hozircha izohlar yo'q.</p>
+              <ul class="comment-list"></ul>
+            </div>
+          </article>
+
+          <article class="news-card">
+            <img src="./img/0131(1).jpg" alt="STEAM laboratoriya ochilishi" />
+            <h3>Yangi STEAM laboratoriyasi ishga tushdi</h3>
+            <p>
+              Fizika va robototexnika fanlari bo'yicha amaliy mashg'ulotlar
+              yangi jihozlangan laboratoriyada olib borilmoqda.
+            </p>
+            <div class="icon-links">
+              <div class="icon-link">
+                <span class="meta"><i class="fa-regular fa-eye"></i> 1.4k</span>
+                <span class="meta"
+                  ><i class="fa-regular fa-comment"></i>
+                  <span class="comment-count">0</span></span
+                >
+                <button class="like-btn" type="button" aria-label="Yoqtirish">
+                  <i class="fa-regular fa-heart"></i>
+                  <span class="like-count">24</span>
+                </button>
+              </div>
+            </div>
+            <div class="comment-box">
+              <form class="comment-form">
+                <input
+                  type="text"
+                  class="comment-input"
+                  placeholder="Fikringizni yozing"
+                  maxlength="120"
+                  required
+                />
+                <button class="btn btn-sm" type="submit">Yuborish</button>
+              </form>
+              <p class="comment-empty">Hozircha izohlar yo'q.</p>
+              <ul class="comment-list"></ul>
+            </div>
+          </article>
+
+          <article class="news-card">
+            <img src="./img/0131(1).jpg" alt="Ochiq eshiklar kuni" />
+            <h3>Ochiq eshiklar kuni yuqori darajada o'tdi</h3>
+            <p>
+              Ota-onalar uchun ta'lim sifati, kurslar va darsdan tashqari
+              to'garaklar bo'yicha taqdimot hamda uchrashuv bo'lib o'tdi.
+            </p>
+            <div class="icon-links">
+              <div class="icon-link">
+                <span class="meta"><i class="fa-regular fa-eye"></i> 1.7k</span>
+                <span class="meta"
+                  ><i class="fa-regular fa-comment"></i>
+                  <span class="comment-count">0</span></span
+                >
+                <button class="like-btn" type="button" aria-label="Yoqtirish">
+                  <i class="fa-regular fa-heart"></i>
+                  <span class="like-count">29</span>
+                </button>
+              </div>
+            </div>
+            <div class="comment-box">
+              <form class="comment-form">
+                <input
+                  type="text"
+                  class="comment-input"
+                  placeholder="Fikringizni yozing"
+                  maxlength="120"
+                  required
+                />
+                <button class="btn btn-sm" type="submit">Yuborish</button>
+              </form>
+              <p class="comment-empty">Hozircha izohlar yo'q.</p>
+              <ul class="comment-list"></ul>
+            </div>
+          </article>
+        </div>
+
+        <div
+          class="news-container extra-news"
+          id="extra-news"
+          aria-hidden="true"
+        >
+          <article class="news-card">
+            <img src="./img/0131(1).jpg" alt="Ingliz tili tanlovi" />
+            <h3>Ingliz tili tanlovida yuqori natija</h3>
+            <p>
+              10-sinf o'quvchilari shahar miqyosidagi ingliz tili tanlovida
+              muvaffaqiyatli qatnashib, sovrinli o'rinlarni qo'lga kiritdi.
+            </p>
+            <div class="icon-links">
+              <div class="icon-link">
+                <span class="meta"><i class="fa-regular fa-eye"></i> 1.1k</span>
+                <span class="meta"
+                  ><i class="fa-regular fa-comment"></i>
+                  <span class="comment-count">0</span></span
+                >
+                <button class="like-btn" type="button" aria-label="Yoqtirish">
+                  <i class="fa-regular fa-heart"></i>
+                  <span class="like-count">16</span>
+                </button>
+              </div>
+            </div>
+            <div class="comment-box">
+              <form class="comment-form">
+                <input
+                  type="text"
+                  class="comment-input"
+                  placeholder="Fikringizni yozing"
+                  maxlength="120"
+                  required
+                />
+                <button class="btn btn-sm" type="submit">Yuborish</button>
+              </form>
+              <p class="comment-empty">Hozircha izohlar yo'q.</p>
+              <ul class="comment-list"></ul>
+            </div>
+          </article>
+
+          <article class="news-card">
+            <img src="./img/0131(1).jpg" alt="Sport musobaqalari" />
+            <h3>Sport musobaqalarida jamoaviy g'alaba</h3>
+            <p>
+              Maktabimiz o'quvchilari mini-futbol va voleybol bo'yicha tuman
+              bosqichida birinchi o'rinlarni egalladi.
+            </p>
+            <div class="icon-links">
+              <div class="icon-link">
+                <span class="meta"><i class="fa-regular fa-eye"></i> 920</span>
+                <span class="meta"
+                  ><i class="fa-regular fa-comment"></i>
+                  <span class="comment-count">0</span></span
+                >
+                <button class="like-btn" type="button" aria-label="Yoqtirish">
+                  <i class="fa-regular fa-heart"></i>
+                  <span class="like-count">13</span>
+                </button>
+              </div>
+            </div>
+            <div class="comment-box">
+              <form class="comment-form">
+                <input
+                  type="text"
+                  class="comment-input"
+                  placeholder="Fikringizni yozing"
+                  maxlength="120"
+                  required
+                />
+                <button class="btn btn-sm" type="submit">Yuborish</button>
+              </form>
+              <p class="comment-empty">Hozircha izohlar yo'q.</p>
+              <ul class="comment-list"></ul>
+            </div>
+          </article>
+
+          <article class="news-card">
+            <img src="./img/0131(1).jpg" alt="Kitobxonlik haftaligi" />
+            <h3>Kitobxonlik haftaligi boshlandi</h3>
+            <p>
+              Bir haftalik kitobxonlik marafoni doirasida o'quvchilar orasida
+              taqdimotlar, viktorinalar va muhokamalar o'tkazilmoqda.
+            </p>
+            <div class="icon-links">
+              <div class="icon-link">
+                <span class="meta"><i class="fa-regular fa-eye"></i> 860</span>
+                <span class="meta"
+                  ><i class="fa-regular fa-comment"></i>
+                  <span class="comment-count">0</span></span
+                >
+                <button class="like-btn" type="button" aria-label="Yoqtirish">
+                  <i class="fa-regular fa-heart"></i>
+                  <span class="like-count">10</span>
+                </button>
+              </div>
+            </div>
+            <div class="comment-box">
+              <form class="comment-form">
+                <input
+                  type="text"
+                  class="comment-input"
+                  placeholder="Fikringizni yozing"
+                  maxlength="120"
+                  required
+                />
+                <button class="btn btn-sm" type="submit">Yuborish</button>
+              </form>
+              <p class="comment-empty">Hozircha izohlar yo'q.</p>
+              <ul class="comment-list"></ul>
+            </div>
+          </article>
+        </div>
+
+        <div class="all-news-wrap">
+          <button id="all-news-btn" type="button" class="btn">
+            Barcha yangiliklar
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <div id="comment-modal" class="comment-modal" aria-hidden="true">
+      <div class="comment-modal-dialog">
+        <button
+          id="comment-close"
+          class="comment-close"
+          type="button"
+          aria-label="Yopish"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="comment-media">
+          <img id="comment-modal-image" src="" alt="Yangilik rasmi" />
+        </div>
+        <div class="comment-panel">
+          <h3 id="comment-modal-title">Izohlar</h3>
+          <ul id="comment-modal-list" class="comment-modal-list"></ul>
+          <p id="comment-modal-empty" class="comment-modal-empty">
+            Hozircha izohlar yo'q.
+          </p>
+          <form id="comment-modal-form" class="comment-modal-form">
+            <input
+              id="comment-modal-input"
+              type="text"
+              class="comment-input"
+              placeholder="Izoh yozing"
+              maxlength="160"
+              required
+            />
+            <button class="btn btn-sm" type="submit">Yuborish</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <button
+      id="scroll-top"
+      class="scroll-top"
+      type="button"
+      aria-label="Yuqoriga"
+    >
+      <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <footer class="footer">
+      <div class="footer-container container">
+        <div class="footer-com">
+          <img
+            src="./img/photo_2026-02-06_11-05-24-2.jpg"
+            alt="Maktab logotipi"
+            class="img2"
+          />
+          <h3>81-maktab</h3>
+          <p>
+            81-sonli maktab zamonaviy va sifatli ta'lim, kuchli qadriyatlar
+            hamda o'quvchi muvaffaqiyati uchun xizmat qiladi.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Tezkor havolalar</h4>
+          <ul>
+            <li><a href="./index.html">Bosh sahifa</a></li>
+            <li><a href="./about.html">Maktab haqida</a></li>
+            <li><a href="./courses.html">Kurslar</a></li>
+            <li><a href="#news">Yangiliklar</a></li>
+            <li><a href="./teachers.html">Ustozlar</a></li>
+            <li><a href="./contact.html">Aloqa</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-cop">
+          <h4>Aloqa</h4>
+          <a
+            href="https://yandex.uz/maps/org/51913117189/?ll=69.190318%2C41.306955&z=16"
+          >
+            <i class="fa-solid fa-location-dot"></i> Toshkent, Maktab No. 81
+          </a>
+          <p>
+            <i class="fa-solid fa-phone"></i>
+            <a href="tel:+998711234567">+998 71 123 45 67</a>
+          </p>
+          <p><i class="fa-solid fa-envelope"></i> info@school81.uz</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        &copy; <span id="year"></span> 81-sonli maktab. Barcha huquqlar
+        himoyalangan.
+      </div>
+    </footer>
+
+    <script src="./news/new.js"></script>
+  </body>
+</html>
