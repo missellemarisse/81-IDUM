@@ -1,9 +1,13 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="uz">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>81-IDUM | Aloqa</title>
+    <meta
+      name="description"
+      content="81-IDUM bilan bog'lanish uchun aloqa ma'lumotlari va xabar yuborish formasi."
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -17,21 +21,16 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./contact/contact.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="contact/contact.css" />
   </head>
   <body>
-    <header class="page-header">
+    <header class="contact-hero" id="home">
+      <div class="overlay"></div>
       <div class="container">
         <div class="header-main" id="navbar">
-          <a
-            class="logo"
-            href="index.html#home"
-            aria-label="81-IDUM bosh sahifa"
-          >
-            <img
-              src="./img/photo_2026-02-06_11-05-24-2.jpg"
-              alt="81-IDUM logotipi"
-            />
+          <a class="logo" href="index.html#home" aria-label="81-IDUM bosh sahifa">
+            <img src="./img/photo_2026-02-06_11-05-24-2.jpg" alt="81-IDUM logotipi" />
           </a>
 
           <button
@@ -46,19 +45,11 @@
 
           <nav id="site-nav">
             <ul>
-              <li>
-                <a class="nav-link" href="index.html#home">Bosh sahifa</a>
-              </li>
-              <li>
-                <a class="nav-link" href="index.html#about">Maktab haqida</a>
-              </li>
+              <li><a class="nav-link" href="index.html#home">Bosh sahifa</a></li>
+              <li><a class="nav-link" href="about.html">Maktab haqida</a></li>
               <li><a class="nav-link" href="courses.html">Kurslar</a></li>
-              <li>
-                <a class="nav-link" href="index.html#news">Yangiliklar</a>
-              </li>
-              <li>
-                <a class="nav-link" href="index.html#teachers">Ustozlar</a>
-              </li>
+              <li><a class="nav-link" href="index.html#news">Yangiliklar</a></li>
+              <li><a class="nav-link" href="teachers.html">Ustozlar</a></li>
               <li><a class="nav-link active" href="contact.html">Aloqa</a></li>
             </ul>
           </nav>
@@ -69,23 +60,26 @@
             <a href="register.html" class="btn">Ro'yxatdan o'tish</a>
           </div>
         </div>
+
+        <div class="contact-hero-content reveal">
+          <span class="badge">81-IDUM Aloqa</span>
+          <h1>Biz bilan <strong>bog'laning</strong></h1>
+          <p>
+            Savol, taklif yoki murojaat bo'lsa, quyidagi forma orqali bizga yozing.
+            Tez orada siz bilan bog'lanamiz.
+          </p>
+          <a href="#contact-main" class="btn"
+            >Xabar yuborish
+            <i class="fa-solid fa-arrow-down" style="margin-left: 6px"></i
+          ></a>
+        </div>
       </div>
     </header>
 
-    <section class="contact-hero">
-      <div class="container">
-        <h1>Aloqa</h1>
-        <p>
-          Savolingiz yoki taklifingiz bo'lsa, bizga yozing. Tez orada javob
-          beramiz.
-        </p>
-      </div>
-    </section>
-
-    <main class="contact-main">
+    <main id="contact-main" class="contact-main">
       <div class="container">
         <div class="contact-layout">
-          <div class="contact-cards">
+          <div class="contact-cards reveal">
             <article class="contact-card">
               <div class="contact-card-icon">
                 <i class="fa-solid fa-location-dot"></i>
@@ -101,6 +95,7 @@
                 </a>
               </div>
             </article>
+
             <article class="contact-card">
               <div class="contact-card-icon">
                 <i class="fa-solid fa-phone"></i>
@@ -110,6 +105,7 @@
                 <p><a href="tel:+998711234567">+998 71 123 45 67</a></p>
               </div>
             </article>
+
             <article class="contact-card">
               <div class="contact-card-icon">
                 <i class="fa-solid fa-envelope"></i>
@@ -121,37 +117,21 @@
             </article>
           </div>
 
-          <div class="contact-form-wrap">
+          <div class="contact-form-wrap reveal">
             <h2>Xabar yuborish</h2>
             <form class="contact-form" id="contact-form">
-              <input
-                type="text"
-                id="name"
-                placeholder="Ismingiz (masalan: Sardor)"
-                required
-              />
-              <input
-                type="email"
-                id="email"
-                placeholder="Email (masalan: sardor@email.uz)"
-                required
-              />
-              <input
-                type="tel"
-                id="phone"
-                placeholder="Telefon (masalan: +998 90 123 45 67)"
-                required
-              />
+              <input type="text" id="name" placeholder="Ismingiz" required />
+              <input type="email" id="email" placeholder="Email" required />
+              <input type="tel" id="phone" placeholder="Telefon" required />
               <textarea
-                name="message"
                 id="shikoyat"
-                placeholder="Shikoyatingiz (Ixtiyoriy)"
+                placeholder="Shikoyat yoki qo'shimcha izoh (ixtiyoriy)"
                 rows="2"
               ></textarea>
               <textarea
                 id="message"
                 rows="5"
-                placeholder="Xabaringiz (masalan: 5-sinfga yozdirish haqida ma'lumot olmoqchiman)"
+                placeholder="Xabaringiz"
                 required
               ></textarea>
               <button class="btn" type="submit">Yuborish</button>
@@ -161,6 +141,10 @@
         </div>
       </div>
     </main>
+
+    <button id="scroll-top" class="scroll-top" type="button" aria-label="Yuqoriga">
+      <i class="fa-solid fa-chevron-up"></i>
+    </button>
 
     <footer class="footer">
       <div class="footer-container container">
@@ -172,29 +156,28 @@
           />
           <h3>81-maktab</h3>
           <p>
-            81-sonli maktab zamonaviy va sifatli ta'lim, kuchli qadriyatlar
-            hamda o'quvchi muvaffaqiyati uchun xizmat qiladi.
+            81-sonli maktab zamonaviy va sifatli ta'lim, kuchli qadriyatlar hamda
+            o'quvchi muvaffaqiyati uchun xizmat qiladi.
           </p>
         </div>
+
         <div class="footer-col">
           <h4>Tezkor havolalar</h4>
           <ul>
             <li><a href="index.html#home">Bosh sahifa</a></li>
-            <li><a href="index.html#about">Maktab haqida</a></li>
+            <li><a href="about.html">Maktab haqida</a></li>
+            <li><a href="courses.html">Kurslar</a></li>
             <li><a href="index.html#news">Yangiliklar</a></li>
-            <li><a href="index.html#teachers">Ustozlar</a></li>
+            <li><a href="teachers.html">Ustozlar</a></li>
             <li><a href="contact.html">Aloqa</a></li>
           </ul>
         </div>
+
         <div class="footer-cop">
           <h4>Aloqa</h4>
-          <p>
-            <i class="fa-solid fa-location-dot"></i>
-            <a
-              href="https://yandex.uz/maps/org/51913117189/?ll=69.190318%2C41.306955&z=16"
-              >Toshkent, Maktab No. 81</a
-            >
-          </p>
+          <a href="https://yandex.uz/maps/org/51913117189/?ll=69.190318%2C41.306955&z=16">
+            <i class="fa-solid fa-location-dot"></i> Toshkent, Maktab No. 81
+          </a>
           <p>
             <i class="fa-solid fa-phone"></i>
             <a href="tel:+998711234567">+998 71 123 45 67</a>
@@ -202,12 +185,12 @@
           <p><i class="fa-solid fa-envelope"></i> info@school81.uz</p>
         </div>
       </div>
+
       <div class="footer-bottom">
-        &copy; <span id="year"></span> 81-sonli maktab. Barcha huquqlar
-        himoyalangan.
+        &copy; <span id="year"></span> 81-sonli maktab. Barcha huquqlar himoyalangan.
       </div>
     </footer>
 
-    <script src="./contact/contact.js"></script>
+    <script src="contact/contact.js"></script>
   </body>
 </html>

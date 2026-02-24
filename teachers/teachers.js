@@ -4,12 +4,11 @@ const siteNav = document.getElementById('site-nav');
 const navLinks = document.querySelectorAll('.nav-link');
 const scrollTopBtn = document.getElementById('scroll-top');
 const reveals = document.querySelectorAll('.reveal');
-const commentForm = document.getElementById('comment-form');
-const commentLikes = document.querySelectorAll('.comment-like');
-const yearEl = document.getElementById('year');
+const statNums = document.querySelectorAll('.stat-num');
+const year = document.getElementById('year');
 
-if (yearEl) {
-  yearEl.textContent = String(new Date().getFullYear());
+if (year) {
+  year.textContent = String(new Date().getFullYear());
 }
 
 if (menuToggle && siteNav) {
@@ -57,44 +56,50 @@ if ('IntersectionObserver' in window) {
         }
       });
     },
-    { threshold: 0.16 }
+    { threshold: 0.18 }
   );
 
   reveals.forEach((item) => revealObserver.observe(item));
+
+  const statsSection = document.querySelector('.teachers-stats-section');
+  let started = false;
+
+  if (statsSection && statNums.length) {
+    const statsObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !started) {
+            started = true;
+
+            statNums.forEach((numEl) => {
+              const target = Number(numEl.dataset.target || '0');
+              const duration = 1400;
+              const startTime = performance.now();
+
+              const step = (now) => {
+                const progress = Math.min((now - startTime) / duration, 1);
+                const eased = 1 - Math.pow(1 - progress, 3);
+                numEl.textContent = String(Math.floor(eased * target));
+
+                if (progress < 1) {
+                  requestAnimationFrame(step);
+                } else {
+                  numEl.textContent = String(target);
+                }
+              };
+
+              requestAnimationFrame(step);
+            });
+
+            statsObserver.disconnect();
+          }
+        });
+      },
+      { threshold: 0.28 }
+    );
+
+    statsObserver.observe(statsSection);
+  }
 } else {
   reveals.forEach((item) => item.classList.add('visible'));
 }
-
-if (commentForm) {
-  commentForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-
-    const prev = commentForm.querySelector('.form-message');
-    if (prev) prev.remove();
-
-    const msg = document.createElement('p');
-    msg.className = 'form-message';
-    msg.textContent = "Izohingiz qabul qilindi. Moderator ko'rib chiqgach chop etiladi.";
-    commentForm.appendChild(msg);
-    commentForm.reset();
-
-    setTimeout(() => {
-      msg.remove();
-    }, 3500);
-  });
-}
-
-commentLikes.forEach((button) => {
-  button.addEventListener('click', () => {
-    const icon = button.querySelector('i');
-    const countEl = button.querySelector('.like-count');
-    if (!icon || !countEl) return;
-
-    const count = Number.parseInt(countEl.textContent || '0', 10);
-    const liked = button.classList.toggle('liked');
-
-    countEl.textContent = String(liked ? count + 1 : Math.max(0, count - 1));
-    icon.classList.toggle('fa-regular', !liked);
-    icon.classList.toggle('fa-solid', liked);
-  });
-});

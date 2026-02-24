@@ -4,12 +4,10 @@ const siteNav = document.getElementById('site-nav');
 const navLinks = document.querySelectorAll('.nav-link');
 const scrollTopBtn = document.getElementById('scroll-top');
 const reveals = document.querySelectorAll('.reveal');
-const contactForm = document.getElementById('contact-form');
-const formMessage = document.getElementById('form-message');
-const yearEl = document.getElementById('year');
+const year = document.getElementById('year');
 
-if (yearEl) {
-  yearEl.textContent = String(new Date().getFullYear());
+if (year) {
+  year.textContent = String(new Date().getFullYear());
 }
 
 if (menuToggle && siteNav) {
@@ -57,30 +55,10 @@ if ('IntersectionObserver' in window) {
         }
       });
     },
-    { threshold: 0.16 }
+    { threshold: 0.18 }
   );
 
   reveals.forEach((item) => observer.observe(item));
 } else {
   reveals.forEach((item) => item.classList.add('visible'));
-}
-
-if (contactForm) {
-  contactForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-
-    const name = document.getElementById('name')?.value.trim();
-    const email = document.getElementById('email')?.value.trim();
-    const message = document.getElementById('message')?.value.trim();
-
-    if (!name || !email || !message) {
-      formMessage.textContent = "Iltimos, barcha maydonlarni to'ldiring.";
-      formMessage.style.color = '#b91c1c';
-      return;
-    }
-
-    formMessage.textContent = "Xabaringiz qabul qilindi. Tez orada siz bilan bog'lanamiz.";
-    formMessage.style.color = '#0f766e';
-    contactForm.reset();
-  });
 }
